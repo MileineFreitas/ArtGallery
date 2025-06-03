@@ -72,6 +72,24 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.get(":id/favoritar/:id", async (req, res) => {
+  if (!req.session.usuario){
+    return res.redirect("/login");
+  }
+  const obraId = req.params.id.includes("=")
+    ? req.params.id.split("=")[1]
+    : req.params.id;
+  const usuario = req.session.usuario.id;
+  const obra = await buscarUmaObra(obraId);
+  const jaFavoritouObra = await jaFavoritou(usuario, obraId);
+  try{
+
+  } catch (erro){
+
+  }
+});
+
+/*
 router.get("/favoritar/:id", async (req, res) => {
   if (!req.session.usuario) {
     return res.redirect("/login");
@@ -110,6 +128,7 @@ router.get("/favoritar/:id", async (req, res) => {
     res.status(500).send("Erro ao favoritar obra");
   }
 });
+*/
 
 /*
 router.get('/favoritar', async (req, res) => {
