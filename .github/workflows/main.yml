@@ -32,7 +32,7 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
-        working-directory: ArtGallery/ArtGallery
+        working-directory: ArtGallery
 
   test:
     name: Testes
@@ -48,25 +48,12 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Instalar dependências
-        run: npm install
-        working-directory: ArtGallery/ArtGallery
+      //- name: Instalar dependências
+       // run: npm install
+       // working-directory: ArtGallery/ArtGallery*/
 
       - name: Executar testes
         run: npm test
-        working-directory: ArtGallery/ArtGallery
-
-  analyze:
-    name: Análise de Licenças
-    runs-on: ubuntu-latest
-    needs: test
-
-    steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
-
-      - name: Instalar dependências
-        run: npm install
         working-directory: ArtGallery/ArtGallery
 
       - name: Analisar licenças
