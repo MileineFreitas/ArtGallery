@@ -91,8 +91,8 @@ jobs:
       - name: Upload semgrep-report.json
         uses: actions/upload-artifact@v4
         with:
-        name: semgrep-report
-        path: ArtGallery/ArtGallery/semgrep-report.json
+          name: semgrep-report
+          path: ArtGallery/ArtGallery/semgrep-report.json
 
   deploy:
     name: Deploy
