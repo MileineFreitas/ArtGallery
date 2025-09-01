@@ -30,9 +30,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      #- name: Instalar dependências
-        #run: npm install
-        #working-directory: ArtGallery
+      - name: Instalar dependências
+        run: npm install
+        working-directory: ArtGallery/ArtGallery
 
   test:
     name: Testes
