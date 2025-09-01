@@ -61,7 +61,7 @@ jobs:
         working-directory: ArtGallery/ArtGallery
 
       - name: Upload licenses.json
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: licenses-report
           path: ArtGallery/ArtGallery/licenses.json
@@ -87,7 +87,7 @@ jobs:
         run: semgrep --config auto ArtGallery/ArtGallery --json > semgrep-report.json
 
       - name: Upload semgrep-report.json
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: semgrep-report
           path: ArtGallery/ArtGallery/semgrep-report.json
