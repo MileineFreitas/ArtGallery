@@ -50,34 +50,21 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
-        working-directory: ArtGallery
+        working-directory: ArtGallery/ArtGallery
 
       - name: Executar testes
         run: npm test
-        working-directory: ArtGallery
-
-  analyze:
-    name: Análise de Licenças
-    runs-on: ubuntu-latest
-    needs: test
-
-    steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
-
-      - name: Instalar dependências
-        run: npm install
-        working-directory: ArtGallery
+        working-directory: ArtGallery/ArtGallery
 
       - name: Analisar licenças
         run: npx license-checker --json > licenses.json
-        working-directory: ArtGallery
+        working-directory: ArtGallery/ArtGallery
 
       - name: Upload licenses.json
         uses: actions/upload-artifact@v3
         with:
           name: licenses-report
-          path: ArtGallery/licenses.json
+          path: ArtGallery/ArtGallery/licenses.json
 
   sast:
     name: SAST (Semgrep)
