@@ -54,11 +54,11 @@ jobs:
 
       - name: Executar testes
         run: npm test
-        working-directory: ArtGallery/ArtGallery
+        working-directory: ArtGallery
 
       - name: Analisar licenças
         run: npx license-checker --json > licenses.json
-        working-directory: ArtGallery/ArtGallery
+        working-directory: ArtGallery
 
       - name: Upload licenses.json
         uses: actions/upload-artifact@v4
