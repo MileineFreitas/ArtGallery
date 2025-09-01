@@ -85,7 +85,7 @@ jobs:
         run: pip install semgrep
 
       - name: Rodar Semgrep
-        run: semgrep --config auto ArtGallery/ArtGallery --json > semgrep-report.json
+        run: semgrep --config auto ArtGallery --json > semgrep-report.json
 
       - name: Upload semgrep-report.json
         uses: actions/upload-artifact@v4
