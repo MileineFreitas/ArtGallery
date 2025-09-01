@@ -69,7 +69,7 @@ jobs:
   sast:
     name: SAST (Semgrep)
     runs-on: ubuntu-latest
-    needs: analyze
+    needs: test
 
     steps:
       - name: Checkout do código
