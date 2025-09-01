@@ -86,13 +86,13 @@ jobs:
 
       - name: Rodar Semgrep
         run: semgrep --config auto ArtGallery --json > semgrep-report.json
-        working-directory: ArtGallery/ArtGallery
+        working-directory: ArtGallery
 
       - name: Upload semgrep-report.json
         uses: actions/upload-artifact@v4
         with:
           name: semgrep-report
-          path: ArtGallery/ArtGallery/semgrep-report.json
+          path: ArtGallery/semgrep-report.json
 
   deploy:
     name: Deploy
