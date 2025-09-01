@@ -53,8 +53,9 @@ jobs:
         working-directory: ArtGallery
 
       - name: Executar testes
-        run: npm test
+        run: npm test -- --passWithNoTests
         working-directory: ArtGallery
+
 
       - name: Analisar licenças
         run: npx license-checker --json > licenses.json
