@@ -50,7 +50,7 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
-        working-directory: ArtGallery/ArtGallery
+        working-directory: ArtGallery
 
       - name: Executar testes
         run: npm test
