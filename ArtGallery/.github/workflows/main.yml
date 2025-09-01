@@ -48,9 +48,9 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Instalar dependências
-        run: npm install
-        working-directory: ArtGallery/ArtGallery
+      //- name: Instalar dependências
+       // run: npm install
+       // working-directory: ArtGallery/ArtGallery*/
 
       - name: Executar testes
         run: npm test
